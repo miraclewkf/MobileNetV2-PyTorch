@@ -20,7 +20,6 @@ This code takes ImageNet dataset as example. You can download ImageNet dataset a
 	├── ILSVRC2012_dev_kit_t12
 		├── data
 			├── ILSVRC2012_validation_ground_truth.txt
-├── output # output
 ```
 
 * Train

@@ -72,6 +72,8 @@ def train_model(args, model, criterion, optimizer, scheduler, num_epochs, datase
                 phase, epoch_loss, epoch_acc))
 
         if (epoch+1) % args.save_epoch_freq == 0:
+            if os.path.exists(args.save_path):
+                os.makedirs(args.save_path)
             torch.save(model, os.path.join(args.save_path, "epoch_" + str(epoch) + ".pth.tar"))
 
     time_elapsed = time.time() - since
