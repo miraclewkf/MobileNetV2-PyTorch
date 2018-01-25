@@ -5,7 +5,7 @@
 
 * Prepare data
 
-This code takes ImageNet dataset as example. You can download ImageNet dataset and put them as follows:
+This code takes ImageNet dataset as example. You can download ImageNet dataset and put them as follows. I only provide `ILSVRC2012_dev_kit_t12` due to the restriction of memory, in other words, you need download `ILSVRC2012_img_train` and `ILSVRC2012_img_val`.
 
 ```
 ├── train.py # train script
@@ -20,6 +20,7 @@ This code takes ImageNet dataset as example. You can download ImageNet dataset a
 	├── ILSVRC2012_dev_kit_t12
 		├── data
 			├── ILSVRC2012_validation_ground_truth.txt
+			├── meta.mat
 ```
 
 * Train
@@ -27,5 +28,5 @@ This code takes ImageNet dataset as example. You can download ImageNet dataset a
 You can change batch size/gpus/lr and train from scratch:
 
 ```
-python train.py --batch-size 512 --gpus 0,1,2,3 --lr 0.1
+python train.py --batch-size 256 --gpus 0,1,2,3
 ```
