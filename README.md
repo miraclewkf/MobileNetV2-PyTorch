@@ -20,7 +20,7 @@ This code takes ImageNet dataset as example. You can download ImageNet dataset a
 	├── ILSVRC2012_dev_kit_t12
 		├── data
 			├── ILSVRC2012_validation_ground_truth.txt
-			├── meta.mat
+			├── meta.mat # the map between train file name and label
 ```
 
 * Train
