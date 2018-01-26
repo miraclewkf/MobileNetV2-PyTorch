@@ -16,12 +16,12 @@ def train_model(args, model, criterion, optimizer, scheduler, num_epochs, datase
 
     best_model_wts = model.state_dict()
 
-    for epoch in range(num_epochs):
+    for epoch in range(args.start_epoch+1,num_epochs):
 
         # Each epoch has a training and validation phase
         for phase in ['train','val']:
             if phase == 'train':
-                scheduler.step()
+                scheduler.step(args.start_epoch+1)
                 model.train(True)  # Set model to training mode
             else:
                 model.train(False)  # Set model to evaluate mode
@@ -98,7 +98,7 @@ if __name__ == '__main__':
     parser.add_argument('--save-epoch-freq', type=int, default=1)
     parser.add_argument('--save-path', type=str, default="output")
     parser.add_argument('--resume', type=str, default="", help="For training from one checkpoint")
-    parser.add_argument('--start-epoch', type=int, default=0, help="For training from one checkpoint at start epoch")
+    parser.add_argument('--start-epoch', type=int, default=0, help="Corresponding to the epoch of resume ")
     args = parser.parse_args()
 
     # read data

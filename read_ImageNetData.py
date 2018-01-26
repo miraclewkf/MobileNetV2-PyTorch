@@ -102,6 +102,7 @@ class ImageNetValDataSet(torch.utils.data.Dataset):
     def __init__(self, img_path, img_label, data_transforms):
         self.data_transforms = data_transforms
         img_names = os.listdir(img_path)
+        img_names.sort()
         self.img_path = [os.path.join(img_path, img_name) for img_name in img_names]
         with open(img_label,"r") as input_file:
             lines = input_file.readlines()
