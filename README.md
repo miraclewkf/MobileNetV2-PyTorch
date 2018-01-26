@@ -1,4 +1,4 @@
-## This is the PyTorch implement of MobileNet V2
+## This is the PyTorch implement of MobileNet V2 (train on ImageNet dataset)
 
 Paper: [Inverted Residuals and Linear Bottlenecks: Mobile Networks for Classification, Detection and Segment](128.84.21.199/abs/1801.04381)
 
